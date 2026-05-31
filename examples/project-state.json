@@ -1,0 +1,21 @@
+{
+  "name": "Agent Memory Schema",
+  "status": "active",
+  "updated": "2026-05-31",
+  "summary": "A reusable Obsidian vault structure for durable AI agent memory.",
+  "owner": "Seth",
+  "currentFocus": "Publish public schema and starter templates.",
+  "nextActions": [
+    "Validate schemas in CI",
+    "Add real-world examples"
+  ],
+  "risks": [
+    "Storing too much raw context instead of distilled memory"
+  ],
+  "links": [
+    {
+      "label": "Repository",
+      "url": "https://github.com/Supermann-ID/obsidian-agent-memory-schema"
+    }
+  ]
+}

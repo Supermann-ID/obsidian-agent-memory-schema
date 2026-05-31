@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Supermann-ID/obsidian-agent-memory-schema/schemas/memory-entry.schema.json",
+  "title": "Agent Memory Entry",
+  "type": "object",
+  "required": ["date", "type", "title", "summary"],
+  "additionalProperties": false,
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["event", "decision", "learning", "error", "project_update", "preference", "todo"]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "details": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "patternKey": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(\\.[a-z0-9-]+)+$"
+    },
+    "source": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9-]*$"
+      },
+      "uniqueItems": true
+    },
+    "nextAction": {
+      "type": "string"
+    }
+  }
+}

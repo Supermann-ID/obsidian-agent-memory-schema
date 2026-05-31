@@ -1,0 +1,15 @@
+{
+  "date": "2026-05-31",
+  "time": "08:45",
+  "type": "learning",
+  "title": "Validate cron JSON before applying it",
+  "summary": "Cron job payloads should be validated before they touch a running agent system.",
+  "details": [
+    "Use jq or Python json.tool before running add or update commands.",
+    "Keep validated templates in the vault or repo."
+  ],
+  "patternKey": "tooling.json-validation-before-cron",
+  "source": "agent ops workflow",
+  "tags": ["agents", "cron", "validation"],
+  "nextAction": "Add validation to the recurring cron workflow."
+}

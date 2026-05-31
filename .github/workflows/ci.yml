@@ -1,0 +1,15 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repository templates
+        run: bash scripts/validate.sh
+      - name: Validate shell syntax
+        run: bash -n scripts/validate.sh
